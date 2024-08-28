@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: black;
+            font-family: "poppins";
+            user-select: none;
+            box-sizing: border-box;
+        }
+        :root{
+            --defaultThemeBg:blanchedalmond;
+            --defaultThemeColor:burlywood;
+            --defaultThemeBlc:#d8a362;
+            --darkThemeBg: rgb(36, 34, 34);
+            --darkThemeFont:rgb(237, 237, 240);
+        }
+        #themechange{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        .move {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border: 1px solid rgb(139, 54, 54);
+            font-size: 18px;
+            background-color: blanchedalmond;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .dark-theme{
+            background-color: var(--darkThemeBg);
+        }
+        .new-move{
+            background-color: rgb(36, 34, 34);
+            border: 1px solid rgb(216, 216, 216);
+        }
+
+        .move:active {
+            transition: .1s;
+            box-shadow: rgba(104, 104, 109, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .new-move:active{
+            transition: .1s;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--defaultThemeBg);
+
+        }
+        .new-body{
+            background-color: var(--darkThemeBg);
+        }
+
+        .gameContainer {
+            height: 90%;
+            width: 100%;
+            padding: 20px;
+            background-color: var(--defaultThemeColor);
+            text-align: center;
+        }
+        .new-container{
+            background-color: rgb(14, 13, 13);
+            color: var(--darkThemeFont);
+        }
+        .gameContainer h1 {
+            margin: 20px;
+            padding-bottom: 20px;
+        }
+        .new-container h1{
+            color:var(--darkThemeFont);
+        }
+        .gameContainer button {
+            margin: 5px;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .new-container button{
+            color: var(--darkThemeFont);
+        }
+
+        #results {
+            margin-top: 30px;
+            padding: 10px;
+
+        }
+        .scores,.result h2{
+            color: var(--darkThemeFont);
+        }
+
+        #resetBtn,.autoPlayBtn{
+            padding: 8px 10px;
+            margin: 10px;
+            border-radius: 10px ;
+            justify-content: center;
+            border: .1px solid black;
+        }
+        #resetBtn:active,.autoPlayBtn:active{
+            
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .resetbn,.autoPlaybn{
+            
+            background-color: rgb(36, 34, 34);
+            border-radius: 10px ;
+            border: none;
+            margin-top: 10px;
+        }
+        .resetbn:active,.autoPlaybn:active{
+            
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .player,.comp{
+            background-color: var(--defaultThemeBlc);
+        }
+        .player{
+            text-align: left;
+            text-indent: 10px;
+            position: relative;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        .player span{
+            position: absolute;
+            left:43%;
+        }
+        .comp{
+            text-align: right;
+            padding-right: 10px;
+            position: relative;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        .comp span{
+            position: absolute;
+            right:44%;
+            left:45px;
+        }
+        .changed-player,.changed-comp{
+            background-color: var(--darkThemeBg);
+        }
+        .dark-result{
+            color: var(--darkThemeFont);
+        }
+        #final_result{
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        @media screen and (max-width: 450px) {
+            
+        .gameContainer h1{
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+        .move {
+            width: 90px;
+            height: 90px;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+        #themechange{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 10px;
+            border: 1px solid rgb(161, 161, 161);
+            background-color: var(--darkThemeBg);
+            color: var(--darkThemeFont);
+        }
+        #results {
+            margin-top: 30px;
+            height: fit-content;
+            padding: 15px;
+        }
+        .comp{
+            text-align: right;
+            padding-right: 100px;
+            position: relative;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        .moves h2{
+            font-size: 20px;
+        }
+        .comp span{
+            right:50%;
+        }
+        #results .verses{
+            margin: 6px;
+            font-size: 1.5rem;
+        }
+        #resetBtn,.autoPlayBtn{
+            padding: 8px 10px;
+            margin: 20px;
+            border-radius: 10px ;
+            justify-content: center;
+            border: .1px solid rgb(67, 67, 67);
+        }
+        }
